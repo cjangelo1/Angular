@@ -6,4 +6,15 @@
       {{ d.name }}
   </h3>
 
+  <p *ngIf="d.description">
+    Description: {{ d.description }}
+    <a [routerLink]="['/products',d.id]">
+      More details
+    </a>
+  </p>
+
+  <button (click)="Share(d.id)">
+    Share
+  </button>
+
 </div>
